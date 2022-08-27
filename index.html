@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<HTML LANG="en">
+
+<head>
+  <title>Google Traducere</title>
+  <link rel="icon" type="image/x-icon" href="gtlogo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="global.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <script src="myJavaScript.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="my-jquery.js"></script>
+</head>
+
+<body>
+
+  <header class="row">
+    <div class="col-sm pt-3 pb-3" id="col1">
+      <span class="material-icons">
+        menu
+      </span> &nbsp;
+      <span id="blue">G</span><span id="red">o</span><span id="yellow">o</span><span id="blue">g</span><span
+        id="green">l</span><span id="red">e</span><span class="text text-muted" id="tr">Traducere</span>
+    <!-- </div>
+    <div class="col-sm-2 pt-3" id="col2"> -->
+      <span class="material-icons float-end pe-3" style="font-size:35px;">
+        account_circle
+      </span>
+      <span class="material-icons float-end pt-2 pe-3">
+        apps
+      </span>
+    </div>
+  </header>
+
+  <div class="container-fluid" id="bigc">
+    <div class="container">
+      <div class="btn-group btn-group-sm bg-light" id="bg" width="100%">
+        <button type="button" class="btn p-10">
+          <span class="material-icons" id="midnav">
+            translate
+          </span>
+          <span class="text" id="txt">Mesaj text</span>
+        </button>
+      </div>
+      <div class="btn-group btn-group-sm bg-light" id="bg" width="100%">
+        <button type="button" class="btn p-10">
+          <span class="material-icons" id="midnav">
+            insert_drive_file
+          </span>
+          <span class="text" id="txt">Documente</span>
+        </button>
+      </div>
+      <div class="btn-group btn-group-sm bg-light" id="bg" width="100%">
+        <button type="button" class="btn p-10 ">
+          <span class="material-icons" id="midnav">
+            language
+          </span>
+          <span class="text" id="txt">Site-uri</span>
+        </button>
+      </div>
+     <!-- <div class="container bg-white border shadow-sm rounded" id="littlec"> -->
+        <div class="row row-cols-2" id="line2">
+          <div class="col-sm-6 border pt-2" id="leftct" width="100%">
+            <ul class="nav nav-tabs text-end" id="navt">
+              <li class="nav-item nav-justified">
+                <a class="nav-link text-dark">SELECTATI LIMBA</a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link text-dark"><b>ROMANA</b></a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link text-dark"><b>ENGLEZA</b></a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link text-dark"><b>GERMANA</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Franceza</a></li>
+                  <li><a class="dropdown-item" href="#">Spaniola</a></li>
+                  <li><a class="dropdown-item" href="#">Turca</a></li>
+                  <li><a class="dropdown-item" href="#">Maghiara</a></li>
+                  <li><a class="dropdown-item" href="#">Japoneza</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="container p-2 my-2" id="cnt1">
+              <div class="row row-cols-1">
+                <div class="col">
+                  <textarea name="text" type="input" placeholder="" id="txta1"
+                    onkeyup="introducere_text(event)"></textarea>
+                  </textarea>
+                </div>
+              </div>
+              <!-- <div class="row"> -->
+                <div class="col">
+                  <span class="material-icons float-start" style="font-size:20px">
+                    mic
+                  </span>
+                  <a class="dropdown-toggle  float-end" data-bs-toggle="dropdown" href="#"> </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Roamana</a></li>
+                    <li><a class="dropdown-item" href="#">Roamana (principala)</a></li>
+                    <li><a class="dropdown-item" href="#">Roamana (secundara)</a></li>
+                  </ul> 
+                  <span class="material-icons text-muted float-end" style="font-size:20px">
+                    keyboard
+                  </span>
+                  <span class="text text-centered me-5 float-end text-muted"
+                     style="font-size:12px" id="totallitere">/5.000</span> 
+                  <span class="text text-centered  float-end text-muted"
+                     style="font-size:12px" id="nrlitere" onkeyup="introducere_text(event)">0</span>
+                </div>
+            </div>
+          </div>
+         <!-- <div class="w-100"></div> -->
+          <div class="col-sm-6 pt-2 border" id="rightct">
+            <ul class="nav nav-tabs" id="navt">
+              <li class="nav-item nav-justified">
+                <a class="nav-link text-dark">SELECTATI LIMBA</a>
+              </li>
+              <li class="nav-item nav-justified ">
+                <a class="nav-link text-dark"><b>ROMANA</b></a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link text-dark"><b>ENGLEZA</b></a>
+              </li>
+              <li class="nav-item nav-justified">
+                <a class="nav-link text-dark"><b>GERMANA</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Franceza</a></li>
+                  <li><a class="dropdown-item" href="#">Spaniola</a></li>
+                  <li><a class="dropdown-item" href="#">Turca</a></li>
+                  <li><a class="dropdown-item" href="#">Maghiara</a></li>
+                  <li><a class="dropdown-item" href="#">Japoneza</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="container p-2 my-2t" id="cnt2">
+              <textarea name="text" placeholder="Traducere" id="txta2"></textarea>
+            </div> 
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+
+    <footer>
+      <div class="nav justify-content-center pt-5">
+        <div class="nav-item pe-5 my-4">
+          <a href="#" class="nav-link border " id="history">
+            <span class="material-icons text-muted" style="font-size:36px;">history</span></a><br>
+          <p class="text text-muted float-end">Istoric&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="nav-item my-4">
+          <a href="#" class="nav-link border" id="saved">
+            <span class="material-icons text-muted" style="font-size:36px;">star</span></a><br>
+          <p class="text text-muted float-end">Salvate&nbsp;&nbsp;</p>
+        </div>
+        <div class="nav-item ps-5 my-4">
+          <a href="#" class="nav-link border" id="contrib">
+            <span class="material-icons text-muted" style="font-size:36px;">people</span></a><br>
+          <p class="text text-muted pt-10">Contribuiti</p>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</HTML>
