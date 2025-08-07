@@ -5,4 +5,4 @@ Please feel free to navigate through the files I had attached to take a closer l
  ### Update! 
 Lately I am into Flutter and I have developed a small project for academic purpose that is still under expansion. The app is intended for fitness centers/gyms and their clients. 
  #### Update v2 :)
- I've found a job and now I have all abilities necessary of developing a web app from zero to hero as they say. Starting with data storing in SQL databases to building RESTful APIs and scalable services, and intuitive, clear and consistent user interfaces.
+ I've found a job and now I have all abilities necessary of developing a web app from zero to hero as they say. Starting with data storing in SQL databases to building RESTful APIs and scalable services, and intuitive, clear and consistent user interfaces. Besides, I have completed my bachelor degree in computer engineering with a project on photovoltaic energy generation forecasting using ML approaches. More about that you can read in the article I have written under my tutor's supervision that was published for Computer Science Students Conference 2025.
